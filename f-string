@@ -1,0 +1,6 @@
+F-string (viết tắt của formatted string) 
+là cú pháp cho phép bạn nhúng trực tiếp giá trị của biến hoặc biểu thức vào trong chuỗi.
+VD:
+arr = [1, 2, 2, 3, 3, 3]
+for i in range(len(arr)):
+    print(f"Phần tử thứ {i} là {arr[i]}")
