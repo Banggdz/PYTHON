@@ -1,0 +1,23 @@
+--- F-string (viết tắt của formatted string) 
+f"{value:format_spec}"
+
+là cú pháp cho phép bạn nhúng trực tiếp giá trị của biến hoặc biểu thức vào trong chuỗi.
+VD:
+arr = [1, 2, 2, 3, 3, 3]
+for i in range(len(arr)):
+    print(f"Phần tử thứ {i} là {arr[i]}")
+f"{3:,}"
+--- format
+"{:format_spec}".format(value)
+
+VD:
+
+"{:,}".format(N)
+153920529 -> 153,920,529
+
+:,	Dấu phẩy phân tách hàng nghìn
+.2f	2 chữ số thập phân
+0>8	Đầy đủ 8 ký tự, thêm 0 ở đầu nếu thiếu
+<10	Căn trái trong 10 ký tự
+>10	Căn phải trong 10 ký tự
+^10	Căn giữa trong 10 ký tự
