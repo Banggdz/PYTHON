@@ -1,0 +1,11 @@
+list=[] chứa các String
+
+lambda: Hàm ẩn danh, giống ()
+x: truyền tham số cho hàm lambda
+
+
+list.sort(key= lambda x:(len(x),x))
+
+Nếu key trả về tuple, Python so sánh tuple theo thứ tự từng phần tử (so sánh lexicographic):
+so sánh phần tử 1 (ở đây len(x)), nếu khác thì dùng kết quả đó.
+nếu phần tử 1 bằng nhau, so sánh phần tử 2 (ở đây x).
