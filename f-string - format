@@ -7,14 +7,16 @@ arr = [1, 2, 2, 3, 3, 3]
 for i in range(len(arr)):
     print(f"Phần tử thứ {i} là {arr[i]}")
 f"{3:,}"
+so = 3.14159
+hien_thi = f"{so:.2f}"
+print(hien_thi)  # Kết quả: '3.14'
+
 --- format
 "{:format_spec}".format(value)
 
 VD:
-
 "{:,}".format(N)
 153920529 -> 153,920,529
-
 :,	Dấu phẩy phân tách hàng nghìn
 .2f	2 chữ số thập phân
 0>8	Đầy đủ 8 ký tự, thêm 0 ở đầu nếu thiếu
