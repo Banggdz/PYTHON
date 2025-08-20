@@ -19,6 +19,11 @@ VD:
 153920529 -> 153,920,529
 :,	Dấu phẩy phân tách hàng nghìn
 .2f	2 chữ số thập phân
+
+so = 3.14159
+lam_tron = "{:.2f}".format(so)
+print(lam_tron)  # Kết quả: '3.14'
+
 0>8	Đầy đủ 8 ký tự, thêm 0 ở đầu nếu thiếu
 <10	Căn trái trong 10 ký tự
 >10	Căn phải trong 10 ký tự
