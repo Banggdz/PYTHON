@@ -1,0 +1,11 @@
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
+
+public class Main {
+    public static void main(String[] args) {
+        String ns = "01/10/1991";
+        DateTimeFormatter f = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        LocalDate date = LocalDate.parse(ns, f);
+        System.out.println(date);  // 👉 in ra dạng ISO: 1991-10-01
+    }
+}
