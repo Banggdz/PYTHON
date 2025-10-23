@@ -1,0 +1,35 @@
+project/
+│
+├── app.py
+├── models.py
+├── templates/
+│   └── students.html
+└── requirements.txt
+
+🚀models.py
+import mysql.connector
+def get_connection():
+    return mysql.connector.connect(
+        host='localhost',
+        user='root',
+        password='123456',
+        database='quanlysv'
+    )
+def get_students():
+    conn = get_connection()
+    cur = conn.cursor(dictionary=True)
+    cur.execute("SELECT * FROM sinhvien")
+    data = cur.fetchall()
+    conn.close()
+    return data
+
+🚀app.py
+from flask import Flask, render_template
+from models import get_students
+app = Flask(__name__)
+@app.route('/')
+def show_students():
+    students = get_students()
+    return render_template('students.html', students=students)
+if __name__ == '__main__':
+    app.run(debug=True)
